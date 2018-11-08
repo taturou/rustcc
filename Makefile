@@ -6,4 +6,5 @@ test:
 
 clean:
 	cargo clean
+	rm -f ./tmp ./tmp.ll
 

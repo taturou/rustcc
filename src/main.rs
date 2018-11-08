@@ -8,10 +8,8 @@ fn main() {
         std::process::exit(1);
     }
 
-    println!(".intel_syntax noprefix");
-    println!(".global main");
-    println!("main:");
-    println!("  mov rax, {}", args[1]);
-    println!("  ret");
+    println!("define i32 @main(i32 %argc, i8** %argv) #0 {{");
+    println!("  ret i32 {}", args[1]);
+    println!("}}");
     return;
 }
