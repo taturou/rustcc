@@ -1,4 +1,20 @@
 # rustcc
 
-�u[�჌�C����m�肽���l�̂��߂�C�R���p�C���쐬����](https://www.sigbus.info/compilerbook/)�v���Q�l�ɁAC����Ŏ������邩����Rust�Ŏ������Ax86�A�Z���u�����o�͂�������LLVM IR���o�͂���悤�ɂ������̂ł��B
+「[低レイヤを知りたい人のためのCコンパイラ作成入門](https://www.sigbus.info/compilerbook/)」を参考に、C言語で実装するかわりにRustで実装し、x86アセンブリを出力する代わりにLLVM IRを出力するようにしたものです。
+
+# How to
+
+## Build
+
+```sh
+$ make
+```
+
+This is same as `$ cargo build`.
+
+## Test
+
+```sh
+$ make test
+```
 
