@@ -1,5 +1,5 @@
 all:
-	cargo run
+	cargo build
 
 test:
 	./test.sh
