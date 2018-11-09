@@ -1,11 +1,18 @@
 #!/bin/bash
+CLANG="/usr/bin/clang"
+LLI="/usr/bin/lli-6.0"
+
 try() {
   expected="$1"
   input="$2"
 
   cargo run "$input" > tmp.ll
-  clang -o tmp tmp.ll
-  ./tmp
+  if [ -e $CLANG ]; then
+    $CLANG -o tmp ./tmp.ll
+    ./tmp
+  else
+    $LLI ./tmp.ll
+  fi
   actual="$?"
 
   if [ "$actual" != "$expected" ]; then
